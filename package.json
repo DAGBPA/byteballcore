@@ -1,20 +1,21 @@
 {
-  "name": "byteballcore",
-  "description": "Byteball Core",
-  "author": "Byteball",
-  "version": "0.2.88",
+  "name": "dag-pizza-dough",
+  "description": "DAG Pizza Dough",
+  "author": "DAGBPA",
+  "version": "0.1",
   "keywords": [
-    "byteball",
+    "DAG",
+	"pizza",
     "multisignature"
   ],
-  "homepage": "https://github.com/byteball/byteballcore",
+  "homepage": "https://github.com/DAGBPA/dag-pizza-dough",
   "license": "MIT",
   "repository": {
-    "url": "git://github.com/byteball/byteballcore.git",
+    "url": "git://github.com/DAGBPA/dag-pizza-dough.git",
     "type": "git"
   },
   "bugs": {
-    "url": "https://github.com/byteball/byteballcore/issues"
+    "url": "https://github.com/DAGBPA/dag-pizza-dough/issues"
   },
   "browser": {
     "request": "browser-request",

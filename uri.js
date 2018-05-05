@@ -7,7 +7,7 @@ var Mnemonic = require('bitcore-mnemonic');
 
 
 function parseUri(uri, callbacks){
-	var protocol = conf.program || 'byteball';
+	var protocol = conf.program || 'dagpizza';
 	var re = new RegExp('^'+protocol+':(.+)$', 'i');
 	var arrMatches = uri.match(re);
 	if (!arrMatches)
