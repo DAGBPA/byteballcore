@@ -1641,7 +1641,7 @@ function sendTextcoinEmail(email, subject, amount, asset, mnemonic){
 	replaceInTextcoinTemplate({amount: amount, asset: asset, mnemonic: mnemonic, usd_amount_str: usd_amount_str}, function(html, text){
 		mail.sendmail({
 			to: email,
-			from: conf.from_email || "noreply@p.top",
+			from: conf.from_email || "noreply@dagpizza.org",
 			subject: subject || "DAG Pizza user beamed you money",
 			body: text,
 			htmlBody: html
@@ -1660,7 +1660,7 @@ function replaceInTextcoinTemplate(params, handleText){
 		});
 		template = template.replace(/\{\{\w*\}\}/g, '');
 
-		var text = "Here is your link to receive " + params.amount + " " + params.asset + params.usd_amount_str + ": http://p.top/#textcoin?" + params.mnemonic;
+		var text = "Here is your link to receive " + params.amount + " " + params.asset + params.usd_amount_str + ": https://dagpizza.org/#textcoin?" + params.mnemonic;
 		handleText(template, text);
 	});
 }

@@ -1,6 +1,6 @@
 # DAG Pizza Dough
 
-This is a library used in [DAG Pizza](http://p.top) clients.  Never used directly.  Some of the clients that require the library:
+This is a library used in [DAG Pizza](http://dagpizza.org) clients.  Never used directly.  Some of the clients that require the library:
 
 * [DAG Pizza](../../../dag-pizza) - GUI wallet for Mac, Windows, Linux, iOS, and Android.
 * [Headless DAG Pizza](../../../dag-pizza-headless) - headless wallet, primarily for server side use.
