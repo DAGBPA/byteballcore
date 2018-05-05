@@ -3,7 +3,7 @@
 This is a library used in [DAG Pizza](http://dagpizza.org) clients.  Never used directly.  Some of the clients that require the library:
 
 * [DAG Pizza](../../../dag-pizza) - GUI wallet for Mac, Windows, Linux, iOS, and Android.
-* [Headless DAG Pizza](../../../dag-pizza-headless) - headless wallet, primarily for server side use.
+* [DAG Pizza Headless](../../../dag-pizza-headless) - headless wallet, primarily for server side use.
 * [DAG Pizza Relay](../../../dag-pizza-relay) - relay node for DAG Pizza network.  It doesn't hold any private keys.
 * [DAG Pizza Hub](../../../dag-pizza-hub) - hub for DAG Pizza network.  Includes the relay, plus can store and forward end-to-end encrypted messages among devices on the DAG Pizza network.
 
