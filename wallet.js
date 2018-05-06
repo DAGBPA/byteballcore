@@ -750,7 +750,7 @@ function readAssetMetadata(arrAssets, handleMetadata){
 		var updateAssets = conf.bLight ? network.requestProofsOfJointsIfNewOrUnstable : function(arrAssets, onDone){ onDone(); };
 		updateAssets(arrAssets, function(){ // make sure we have assets itself
 			arrAssets.forEach(function(asset){
-				if (assocAssetMetadata[asset] || asset === 'base' && asset === constants.BLACKBYTES_ASSET)
+				if (assocAssetMetadata[asset] || asset === 'base' && asset === constants.NOODLES_ASSET)
 					return;
 				if ((assocLastFailedAssetMetadataTimestamps[asset] || 0) > Date.now() - ASSET_METADATA_RETRY_PERIOD)
 					return;
@@ -1361,7 +1361,7 @@ function sendMultiPayment(opts, handleResult)
 			if (arrFundedAddresses.length === 0)
 				return handleResult("There are no funded addresses");
 			if (asset && arrBaseFundedAddresses.length === 0)
-				return handleResult("No bytes to pay fees");
+				return handleResult("No pizza to pay fees");
 
 			var signer = getSigner(opts, arrSigningDeviceAddresses, signWithLocalPrivateKey);
 
