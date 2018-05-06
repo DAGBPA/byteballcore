@@ -1552,7 +1552,7 @@ function validatePaymentInputsAndOutputs(conn, payload, objAsset, message_index,
 					else{
 						if (!storage.isGenesisUnit(objUnit.unit))
 							return cb("only genesis can issue base asset");
-						if (input.amount !== constants.TOTAL_WHITEBYTES)
+						if (input.amount !== constants.TOTAL_PIZZA)
 							return cb("issue must be equal to cap");
 					}
 					total_input += input.amount;

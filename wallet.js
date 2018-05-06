@@ -1083,7 +1083,7 @@ function readFullSigningPaths(conn, address, arrSigningDeviceAddresses, handleSi
 
 function readAssetProps(asset, handleResult){
 	if (!asset)
-		return handleResult({fixed_denominations: false, cap: constants.TOTAL_WHITEBYTES, issued_by_definer_only: true});
+		return handleResult({fixed_denominations: false, cap: constants.TOTAL_PIZZA, issued_by_definer_only: true});
 	storage.readAsset(db, asset, null, function(err, objAsset){
 		if (err)
 			throw Error(err);

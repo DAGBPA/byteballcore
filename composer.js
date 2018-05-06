@@ -671,13 +671,13 @@ function composeJoint(params){
 			var naked_payload_commission = objectLength.getTotalPayloadSize(objUnit); // without input coins
 
 			if (bGenesis){
-				var issueInput = {type: "issue", serial_number: 1, amount: constants.TOTAL_WHITEBYTES};
+				var issueInput = {type: "issue", serial_number: 1, amount: constants.TOTAL_PIZZA};
 				if (objUnit.authors.length > 1) {
 					issueInput.address = arrWitnesses[0];
 				}
 				objPaymentMessage.payload.inputs = [issueInput];
 				objUnit.payload_commission = objectLength.getTotalPayloadSize(objUnit);
-				total_input = constants.TOTAL_WHITEBYTES;
+				total_input = constants.TOTAL_PIZZA;
 				return cb();
 			}
 			if (params.inputs){ // input coins already selected
