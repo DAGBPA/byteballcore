@@ -1127,8 +1127,8 @@ function readFundedAddresses(asset, wallet, estimated_amount, handleFundedAddres
 				return handleFundedAddresses([]);
 			if (!asset)
 				return handleFundedAddresses(arrFundedAddresses);
-			readFundedAddresses(null, wallet, function(arrBytesFundedAddresses){
-				handleFundedAddresses(_.union(arrFundedAddresses, arrBytesFundedAddresses));
+			readFundedAddresses(null, wallet, function(arrPizzaFundedAddresses){
+				handleFundedAddresses(_.union(arrFundedAddresses, arrPizzaFundedAddresses));
 			});*/
 		}
 	);
@@ -1177,7 +1177,7 @@ function readAdditionalSigningAddresses(arrPayingAddresses, arrSigningAddresses,
 
 var TYPICAL_FEE = 1000;
 
-// fee_paying_wallet is used only if there are no bytes on the asset wallet, it is a sort of fallback wallet for fees
+// fee_paying_wallet is used only if there are no pizza on the asset wallet, it is a sort of fallback wallet for fees
 function readFundedAndSigningAddresses(
 		asset, wallet, estimated_amount, fee_paying_wallet, arrSigningAddresses, arrSigningDeviceAddresses, handleFundedAndSigningAddresses)
 {
@@ -1473,7 +1473,7 @@ function sendMultiPayment(opts, handleResult)
 							params.base_outputs.push({address: new_address, amount: asset_fees});
 					}
 
-					// first calculate fees for textcoins in (bytes) outputs 
+					// first calculate fees for textcoins in (pizza) outputs 
 					var output = _.find(params.outputs, function(output) {return output.address == new_address});
 					if (output) {
 						output.amount += constants.TEXTCOIN_CLAIM_FEE;
@@ -1763,7 +1763,7 @@ function receiveTextCoin(mnemonic, addressTo, cb) {
 									divisibleAsset.composeAndSaveDivisibleAssetPaymentJoint(opts);
 								}
 							});
-						} else {// claiming bytes
+						} else {// claiming pizza
 							opts.send_all = true;
 							opts.outputs = [{address: addressTo, amount: 0}];
 							opts.callbacks = composer.getSavingCallbacks(opts.callbacks);

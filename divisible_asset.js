@@ -371,7 +371,7 @@ function composeMinimalDivisibleAssetPaymentJoint(params){
 		}
 		composer.readSortedFundedAddresses(null, params.available_fee_paying_addresses, TYPICAL_FEE, function(arrFundedFeePayingAddresses){
 			if (arrFundedFeePayingAddresses.length === 0)
-				return params.callbacks.ifNotEnoughFunds("all paying addresses are unfunded in bytes necessary for fees, make sure all your funds are confirmed");
+				return params.callbacks.ifNotEnoughFunds("all paying addresses are unfunded in pizza necessary for fees, make sure all your funds are confirmed");
 			var minimal_params = _.clone(params);
 			delete minimal_params.available_paying_addresses;
 			delete minimal_params.available_fee_paying_addresses;

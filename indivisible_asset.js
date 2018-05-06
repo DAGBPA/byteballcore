@@ -1046,7 +1046,7 @@ var TYPICAL_FEE = 3000;
 // reads addresses funded in asset plus addresses for paying commissions
 function readFundedAddresses(asset, amount, arrAvailablePayingAddresses, arrAvailableFeePayingAddresses, handleFundedAddresses){
 	readAddressesFundedInAsset(asset, amount, arrAvailablePayingAddresses, function(arrAddressesFundedInAsset){
-		// add other addresses to pay for commissions (in case arrAddressesFundedInAsset don't have enough bytes to pay commissions)
+		// add other addresses to pay for commissions (in case arrAddressesFundedInAsset don't have enough pizza to pay commissions)
 	//	var arrOtherAddresses = _.difference(arrAvailablePayingAddresses, arrAddressesFundedInAsset);
 	//	if (arrOtherAddresses.length === 0)
 	//		return handleFundedAddresses(arrAddressesFundedInAsset);
